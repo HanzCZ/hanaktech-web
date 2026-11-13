@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HanakTech — audit IT a AI, školení, správa a řešení na míru pro firmy</title>
+<meta name="description" content="Pomáháme firmám s IT, automatizací a umělou inteligencí: audit procesů, zaškolení lidí, průběžná správa a rozvoj a řešení na míru. Pro živnostníky, malé i střední firmy.">
+<meta property="og:title" content="HanakTech — IT, AI a automatizace pro firmy">
+<meta property="og:description" content="Audit IT a AI procesů, zaškolení týmu, správa a rozvoj a firemní řešení na míru.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="cs_CZ">
+<link rel="icon" href="assets/app-icon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="wrap nav">
+    <a href="index.html" aria-label="HanakTech"><img class="logo" src="assets/logo-primary.svg" alt="HanakTech"></a>
+    <nav class="nav-links">
+      <a href="#sluzby">Služby</a>
+      <a href="#pro-koho">Pro koho</a>
+      <a href="#jak">Jak to probíhá</a>
+      <a href="#proc">Proč my</a>
+      <a href="blog.html">Články</a>
+      <a href="#kontakt" class="btn btn-primary btn-sm"><span class="lbl-long">Nezávazná konzultace</span><span class="lbl-short">Konzultace</span></a>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">IT · AI · Automatizace pro firmy</div>
+      <h1>IT a AI, které pro vaši firmu <span>opravdu pracují</span></h1>
+      <p class="lead">Projdeme, jak u vás fungují IT a AI procesy, zaškolíme vaše lidi, postaráme se o provoz a připravíme řešení na míru. Pro živnostníky, malé i střední firmy.</p>
+      <div class="hero-cta">
+        <a href="#kontakt" class="btn btn-primary">Domluvit konzultaci ➜</a>
+        <a href="#sluzby" class="btn btn-ghost">Co pro firmy děláme</a>
+      </div>
+      <div class="hero-trust">
+        <div><b>Srozumitelně</b> — bez odborné hantýrky</div>
+        <div><b>Bezpečně</b> — vaše data zůstanou vaše</div>
+        <div><b>Na míru</b> — podle velikosti firmy</div>
+      </div>
+    </div>
+    <!-- HERO ILUSTRACE -->
+    <div class="hero-art">
+      <svg viewBox="0 0 480 420" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Audit, automatizace a AI ve firmě">
+        <defs>
+          <linearGradient id="h-gold" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#F7CC1A"/><stop offset="1" stop-color="#D9A300"/></linearGradient>
+          <linearGradient id="h-dark" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#2B3845"/><stop offset="1" stop-color="#16202A"/></linearGradient>
+          <linearGradient id="h-screen" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#22303C"/><stop offset="1" stop-color="#141D25"/></linearGradient>
+        </defs>
+        <!-- soft blob -->
+        <circle cx="245" cy="210" r="190" fill="rgba(247,204,26,.07)"/>
+        <!-- AI jiskra -->
+        <path transform="translate(112,92)" fill="url(#h-gold)" d="M0-30 8-8 30 0 8 8 0 30-8 8-30 0-8-8z"/>
+        <path transform="translate(160,56)" fill="#E0A800" d="M0-12 3.2-3.2 12 0 3.2 3.2 0 12-3.2 3.2-12 0-3.2-3.2z"/>
+        <!-- notebook: tok procesu + přehled -->
+        <g transform="translate(40,156)">
+          <rect x="0" y="0" width="270" height="172" rx="14" fill="url(#h-dark)"/>
+          <rect x="14" y="14" width="242" height="132" rx="8" fill="url(#h-screen)"/>
+          <!-- tok procesu -->
+          <line x1="62" y1="48" x2="119" y2="48" stroke="#4A5C6B" stroke-width="3" stroke-dasharray="5 5"/>
+          <line x1="151" y1="48" x2="208" y2="48" stroke="#4A5C6B" stroke-width="3" stroke-dasharray="5 5"/>
+          <rect x="30" y="34" width="32" height="28" rx="7" fill="#F5C518"/>
+          <rect x="119" y="34" width="32" height="28" rx="7" fill="#4A5C6B"/>
+          <rect x="208" y="34" width="32" height="28" rx="7" fill="#E0A800"/>
+          <!-- graf -->
+          <rect x="30" y="112" width="22" height="22" rx="4" fill="#3C4C5A"/>
+          <rect x="60" y="101" width="22" height="33" rx="4" fill="#3C4C5A"/>
+          <rect x="90" y="90" width="22" height="44" rx="4" fill="#3C4C5A"/>
+          <rect x="120" y="78" width="22" height="56" rx="4" fill="#F5C518"/>
+          <!-- řádky -->
+          <rect x="162" y="84" width="78" height="8" rx="4" fill="#3C4C5A"/>
+          <rect x="162" y="102" width="56" height="8" rx="4" fill="#3C4C5A"/>
+          <rect x="162" y="120" width="68" height="8" rx="4" fill="#3C4C5A"/>
+          <rect x="-18" y="172" width="306" height="14" rx="7" fill="#0E161D"/>
+        </g>
+        <!-- auditní zpráva (checklist) -->
+        <g transform="translate(318,70) rotate(7)">
+          <rect x="0" y="0" width="128" height="172" rx="14" fill="#FFFFFF" stroke="#ECE7D8" stroke-width="2"/>
+          <rect x="18" y="20" width="62" height="9" rx="4.5" fill="#15171A"/>
+          <rect x="18" y="36" width="40" height="6" rx="3" fill="#D9DDE2"/>
+          <circle cx="29" cy="72" r="11" fill="#F5C518"/>
+          <path d="M23.5 72l4 4 7-8.5" fill="none" stroke="#15171A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="50" y="68" width="60" height="8" rx="4" fill="#D9DDE2"/>
+          <circle cx="29" cy="104" r="11" fill="#F5C518"/>
+          <path d="M23.5 104l4 4 7-8.5" fill="none" stroke="#15171A" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/>
+          <rect x="50" y="100" width="46" height="8" rx="4" fill="#D9DDE2"/>
+          <circle cx="29" cy="136" r="9.5" fill="none" stroke="#C9CED4" stroke-width="3"/>
+          <rect x="50" y="132" width="54" height="8" rx="4" fill="#D9DDE2"/>
+        </g>
+        <!-- ozubené kolo (automatizace) -->
+        <g transform="translate(362,286) scale(1.35)">
+          <path fill="url(#h-gold)" d="M24 8l3 0 1.5 6 5 2 5-3.5 2 2-3.5 5 2 5 6 1.5 0 3-6 1.5-2 5 3.5 5-2 2-5-3.5-5 2-1.5 6-3 0-1.5-6-5-2-5 3.5-2-2 3.5-5-2-5-6-1.5 0-3 6-1.5 2-5-3.5-5 2-2 5 3.5 5-2 1.5-6 3 0z"/>
+          <circle cx="25.5" cy="25.5" r="8" fill="#16202A"/>
+        </g>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- SLUŽBY -->
+<section id="sluzby" class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Co pro firmy děláme</div>
+      <h2>Čtyři služby, které na sebe navazují</h2>
+      <p class="lead" style="margin:0 auto">Můžete začít kteroukoli z nich. Nejčastěji ale začínáme auditem — ať víme, co má smysl řešit jako první.</p>
+    </div>
+    <div class="cards cards-2">
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#15171A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="16.5" y1="16.5" x2="21" y2="21"/><polyline points="8 11 10.3 13.3 14.2 9"/></svg></div>
+        <h3>Audit IT a AI procesů</h3>
+        <p>Zmapujeme, jak u vás IT a práce s daty skutečně funguje — a kde zbytečně utíká čas a peníze.</p>
+        <ul>
+          <li>Technika, software, licence a zálohy</li>
+          <li>Bezpečnost: hesla, přístupy, firemní data</li>
+          <li>Kde se vyplatí automatizace a AI</li>
+          <li>Výstup: srozumitelná zpráva s prioritami</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#15171A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11.5V16c0 1.2 2.7 2.5 6 2.5s6-1.3 6-2.5v-4.5"/><line x1="22" y1="9" x2="22" y2="14"/></svg></div>
+        <h3>Zaškolení týmu</h3>
+        <p>Naučíme vaše lidi využívat IT, automatizace a AI v každodenní práci — na vašich skutečných úkolech, ne na obecných příkladech.</p>
+        <ul>
+          <li>AI v kanceláři: e-maily, dokumenty, podklady</li>
+          <li>Práce s automatizacemi a firemními nástroji</li>
+          <li>Bezpečné zacházení s daty a hesly</li>
+          <li>Pro vedení, kancelář i celé týmy</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#15171A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 4.5-3.4 8-8 9-4.6-1-8-4.5-8-9V6z"/><polyline points="8.5 12.5 11 15 15.5 10"/></svg></div>
+        <h3>Správa a rozvoj</h3>
+        <p>Zavedením to nekončí. O vaše IT, automatizace i AI nástroje se průběžně staráme a dál je rozvíjíme.</p>
+        <ul>
+          <li>Dohled nad provozem a pomoc, když něco drhne</li>
+          <li>Úpravy a ladění podle toho, jak firma roste</li>
+          <li>Pravidelné vyhodnocení, co funguje a co ne</li>
+          <li>Jeden kontakt na všechno kolem IT a AI</li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="#15171A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="8 6 3 12 8 18"/><polyline points="16 6 21 12 16 18"/><line x1="13.5" y1="5" x2="10.5" y2="19"/></svg></div>
+        <h3>Firemní řešení na míru</h3>
+        <p>Navrhneme a připravíme přesně to, co vaše firma potřebuje — od jednoduché automatizace po vlastní nástroj.</p>
+        <ul>
+          <li>Automatizace opakované práce: reporty, faktury, formuláře</li>
+          <li>Propojení aplikací a systémů</li>
+          <li>AI asistenti a interní nástroje</li>
+          <li>Od zadání po předání včetně zaškolení</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- PRO KOHO -->
+<section id="pro-koho">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Pro koho</div>
+      <h2>Stejný přístup, jiný rozsah</h2>
+      <p class="lead" style="margin:0 auto">Živnostník potřebuje něco jiného než firma s padesáti lidmi. Rozsah i cenu vždy přizpůsobíme.</p>
+    </div>
+    <div class="audience">
+      <div class="aud">
+        <div class="eyebrow">Živnostníci a malé firmy</div>
+        <h3>Nemáte vlastního „ajťáka“</h3>
+        <p>IT řešíte, až když hoří. Dáme do pořádku základy, ukážeme, co vám AI reálně ušetří, a nastavíme jen to, co opravdu využijete.</p>
+        <ul>
+          <li>Pořádek v zálohách, heslech a účtech</li>
+          <li>AI a automatizace pro každodenní agendu</li>
+          <li>Poradíme, co se vyplatí — a co je zbytečné</li>
+        </ul>
+      </div>
+      <div class="aud aud-dark">
+        <div class="eyebrow">Střední firmy</div>
+        <h3>Máte systémy, procesy i lidi</h3>
+        <p>Jen to spolu ne vždy hraje. Najdeme úzká místa, propojíme, co má být propojené, a zaškolíme týmy.</p>
+        <ul>
+          <li>Audit procesů napříč odděleními</li>
+          <li>Automatizace a propojení systémů</li>
+          <li>Školení týmů a pravidla pro práci s AI</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- JAK TO PROBÍHÁ -->
+<section id="jak" class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Krok za krokem</div>
+      <h2>Jak spolupráce probíhá</h2>
+    </div>
+    <div class="steps steps-4">
+      <div class="step">
+        <h3>Úvodní konzultace</h3>
+        <p>Řeknete nám, co vás trápí a kam se chcete dostat. Nezávazně.</p>
+      </div>
+      <div class="step">
+        <h3>Audit</h3>
+        <p>Projdeme vaše IT a procesy a sepíšeme, co funguje, co ne a kde je největší přínos.</p>
+      </div>
+      <div class="step">
+        <h3>Návrh a realizace</h3>
+        <p>Priority i cenu si odsouhlasíme předem. Pak zaškolíme lidi a nasadíme řešení.</p>
+      </div>
+      <div class="step">
+        <h3>Správa a rozvoj</h3>
+        <p>Zůstáváme po ruce. Hlídáme, ladíme a rozvíjíme dál podle toho, jak firma roste.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROČ MY -->
+<section id="proc">
+  <div class="wrap why">
+    <div>
+      <div class="eyebrow">Proč HanakTech</div>
+      <h2>Partner, který mluví lidsky</h2>
+      <p class="lead">Rodinná firma, žádný anonymní dodavatel. Řekneme vám na rovinu, co má smysl — a co by bylo zbytečné utrácení.</p>
+      <div class="crenel"></div>
+    </div>
+    <ul>
+      <li><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#15171A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><b>Srozumitelně</b><span>Bez hantýrky — tak, aby tomu rozuměl i ten, kdo IT běžně neřeší.</span></div></li>
+      <li><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#15171A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><b>Cena předem</b><span>Rozsah i cenu si odsouhlasíme dřív, než začneme. Žádná překvapení.</span></div></li>
+      <li><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#15171A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><b>Firemní data v bezpečí</b><span>S vašimi daty a přístupy zacházíme diskrétně a opatrně.</span></div></li>
+      <li><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#15171A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><b>Nezávislé doporučení</b><span>Neprodáváme hardware, takže radíme to, co se hodí vám.</span></div></li>
+      <li><svg viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="#15171A" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><div><b>Osobně</b><span>Domluva je rychlá, klidně přímo u vás ve firmě.</span></div></li>
+    </ul>
+  </div>
+</section>
+
+<!-- CTA BAND -->
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="cta-band">
+      <h2>Nevíte, kde začít?</h2>
+      <p>Začněte úvodní konzultací. Probereme, co vás ve firmě trápí, a navrhneme první krok.</p>
+      <a href="#kontakt" class="btn btn-primary">Domluvit konzultaci ➜</a>
+    </div>
+  </div>
+</section>
+
+<!-- KONTAKT -->
+<section id="kontakt" class="section-soft">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Ozvěte se</div>
+      <h2>Kontakt</h2>
+    </div>
+    <div class="contact">
+      <div class="contact-info">
+        <div class="ci"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#15171A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><div><b>Telefon</b><span><a href="tel:+420730689430">+420 730 689 430</a></span></div></div>
+        <div class="ci"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#15171A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></div><div><b>E-mail</b><span><a href="mailto:jan.jh.hanak@gmail.com">jan.jh.hanak@gmail.com</a></span></div></div>
+        <div class="ci"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#15171A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></div><div><b>Web</b><span>hanaktech.eu</span></div></div>
+      </div>
+      <form class="form" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+        <label for="n">Jméno</label>
+        <input id="n" type="text" placeholder="Jak vám máme říkat" autocomplete="name" required>
+        <label for="f">Firma</label>
+        <input id="f" type="text" placeholder="Název firmy (nepovinné)" autocomplete="organization">
+        <label for="c">Telefon nebo e-mail</label>
+        <input id="c" type="text" placeholder="Kam se vám ozveme" required>
+        <label for="m">S čím můžeme pomoct?</label>
+        <textarea id="m" rows="4" placeholder="Stačí pár vět — co řešíte, kolik vás je, co vás zdržuje…"></textarea>
+        <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Odeslat poptávku</button>
+        <p class="ok" style="display:none;color:var(--gold-700);font-weight:700;margin:14px 0 0;text-align:center">Díky! Toto je zatím ukázkový formulář — odesílání teprve napojíme.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <img class="logo" src="assets/logo-dark.svg" alt="HanakTech">
+        <p style="max-width:36ch">Rodinná firma — audit IT a AI procesů, zaškolení, správa a rozvoj a firemní řešení na míru.</p>
+      </div>
+      <div>
+        <h4>Služby</h4>
+        <a href="#sluzby">Audit IT a AI procesů</a>
+        <a href="#sluzby">Zaškolení týmu</a>
+        <a href="#sluzby">Správa a rozvoj</a>
+        <a href="#sluzby">Řešení na míru</a>
+      </div>
+      <div>
+        <h4>Web</h4>
+        <a href="#pro-koho">Pro koho</a>
+        <a href="#jak">Jak to probíhá</a>
+        <a href="#proc">Proč my</a>
+        <a href="blog.html">Články</a>
+        <a href="#kontakt">Kontakt</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 HanakTech · Jarvis servis s.r.o., IČO 07039263</span>
+      <span>hanaktech.eu · jan.jh.hanak@gmail.com</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
