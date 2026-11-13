@@ -273,17 +273,20 @@
         <div class="ci"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#15171A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 6 10 7 10-7"/></svg></div><div><b>E-mail</b><span><a href="mailto:jan.jh.hanak@gmail.com">jan.jh.hanak@gmail.com</a></span></div></div>
         <div class="ci"><div class="ico"><svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="#15171A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"/></svg></div><div><b>Web</b><span>hanaktech.eu</span></div></div>
       </div>
-      <form class="form" onsubmit="event.preventDefault();this.querySelector('.ok').style.display='block';">
+      <!-- Odpovědi se ukládají přes Google Forms; názvy polí (entry.…) musí odpovídat otázkám ve formuláři. -->
+      <form class="form" id="poptavka" method="POST" action="https://docs.google.com/forms/d/e/1FAIpQLSdPTXcuk-1KqFp6KpVIZv03vpaherBu07YcIZ8GrsKAfCfO8Q/formResponse">
         <label for="n">Jméno</label>
-        <input id="n" type="text" placeholder="Jak vám máme říkat" autocomplete="name" required>
+        <input id="n" name="entry.976342650" type="text" placeholder="Jak vám máme říkat" autocomplete="name" maxlength="120" required>
         <label for="f">Firma</label>
-        <input id="f" type="text" placeholder="Název firmy (nepovinné)" autocomplete="organization">
+        <input id="f" name="entry.761516647" type="text" placeholder="Název firmy (nepovinné)" autocomplete="organization" maxlength="160">
         <label for="c">Telefon nebo e-mail</label>
-        <input id="c" type="text" placeholder="Kam se vám ozveme" required>
+        <input id="c" name="entry.679313654" type="text" placeholder="Kam se vám ozveme" maxlength="160" required>
         <label for="m">S čím můžeme pomoct?</label>
-        <textarea id="m" rows="4" placeholder="Stačí pár vět — co řešíte, kolik vás je, co vás zdržuje…"></textarea>
+        <textarea id="m" name="entry.341223945" rows="4" maxlength="3000" placeholder="Stačí pár vět — co řešíte, kolik vás je, co vás zdržuje…"></textarea>
+        <input class="hp" type="text" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
         <button class="btn btn-primary" type="submit" style="width:100%;justify-content:center">Odeslat poptávku</button>
-        <p class="ok" style="display:none;color:var(--gold-700);font-weight:700;margin:14px 0 0;text-align:center">Díky! Toto je zatím ukázkový formulář — odesílání teprve napojíme.</p>
+        <p class="form-status" role="status" aria-live="polite"></p>
+        <p class="form-note">Údaje z formuláře použijeme jen k tomu, abychom se vám ozvali.</p>
       </form>
     </div>
   </div>
@@ -319,6 +322,41 @@
     </div>
   </div>
 </footer>
+
+<script>
+// Odeslání poptávky na pozadí, bez opuštění stránky.
+(function () {
+  var form = document.getElementById('poptavka');
+  if (!form || !window.fetch || !window.URLSearchParams) return; // bez JS se formulář odešle klasicky
+  var btn = form.querySelector('button[type="submit"]');
+  var status = form.querySelector('.form-status');
+  var label = btn.textContent;
+
+  function show(text, ok) {
+    status.textContent = text;
+    status.className = 'form-status ' + (ok ? 'is-ok' : 'is-err');
+  }
+  function ready() { btn.disabled = false; btn.textContent = label; }
+  function done() { form.reset(); ready(); show('Díky, poptávka je odeslaná. Ozveme se vám.', true); }
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    var data = new URLSearchParams(new FormData(form));
+    // Past na roboty: skryté pole má zůstat prázdné.
+    if (data.get('web')) { done(); return; }
+    data.delete('web');
+    btn.disabled = true;
+    btn.textContent = 'Odesílám…';
+    show('', true);
+    fetch(form.action, { method: 'POST', mode: 'no-cors', body: data })
+      .then(done)
+      .catch(function () {
+        ready();
+        show('Odeslání se nepovedlo. Zkuste to prosím znovu, nebo nám napište e-mailem.', false);
+      });
+  });
+})();
+</script>
 
 </body>
 </html>

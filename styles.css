@@ -169,6 +169,14 @@ section[id]{scroll-margin-top:72px}
 .form label{font-weight:600;font-size:.9rem;display:block;margin:0 0 6px}
 .form input,.form textarea{width:100%;padding:.8rem 1rem;border:1px solid var(--line);
   border-radius:10px;font:inherit;margin-bottom:16px;background:#fff}
+.form{position:relative}
+.form .hp{position:absolute;left:-9999px;width:1px;height:1px;padding:0;margin:0;border:0;opacity:0}
+.form button:disabled{opacity:.6;cursor:default;transform:none}
+.form-status{margin:14px 0 0;text-align:center;font-weight:700}
+.form-status:empty{display:none}
+.form-status.is-ok{color:var(--gold-700)}
+.form-status.is-err{color:#B3261E}
+.form-note{margin:12px 0 0;text-align:center;font-size:.82rem;color:var(--muted)}
 .form input:focus,.form textarea:focus{outline:2px solid var(--gold-dark);border-color:var(--gold-dark)}
 
 /* footer */
